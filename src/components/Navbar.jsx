@@ -7,8 +7,9 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { Cart, Chat, Notification, UserProfile } from '.';
 import { useStateContext } from '../contexts/ContextProvider';
+
 const displayavatar = location.pathname === '/customer' ? 'https://images.unsplash.com/photo-1623212113495-101ed133641c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' : 'https://images.unsplash.com/photo-1549845375-ce0a0ba8288c?q=80&w=1838&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
-const avatar = location.pathname == '/customer' ? 'Ronav': 'Karthik';
+const avatar = location.pathname === '/customer' ? 'Ronav' : 'Karthik';
 
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
   <TooltipComponent content={title} position="BottomCenter">
@@ -71,7 +72,7 @@ const Navbar = () => {
             <p>
               <span className="text-gray-400 text-14">Hi,</span>{' '}
               <span className="text-gray-400 font-bold ml-1 text-14">
-              {avatar}
+                {avatar}
               </span>
             </p>
             <MdKeyboardArrowDown className="text-gray-400 text-14" />

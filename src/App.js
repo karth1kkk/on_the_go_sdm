@@ -31,7 +31,7 @@ const App = () => {
 };
 
 const AppContent = () => {
-  const location = useLocation();  // Moved inside the <BrowserRouter> context
+  const location = useLocation();// Moved inside the <BrowserRouter> context
   const { activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
 
   return (
